@@ -77,7 +77,7 @@ public class Epic2Test {
     @Test
     public void shouldThrowExceptionForMissingEmployee() throws Exception {
         String empID = "IDx";
-        String expectedMessage = "Company.Employee.Employee IDx was not registered yet.";
+        String expectedMessage = "Employee IDx was not registered yet.";
 
         Exception exceptionPrint = assertThrows(Exception.class, () -> {
             facade.printEmployee(empID);
