@@ -1,7 +1,7 @@
 package Company.Employee;
 
-import assignment3.Exceptions.InvalidEmployeeDataException;
-import assignment3.Util.Util;
+import Company.Exceptions.InvalidEmployeeDataException;
+import Company.Util.Util;
 
 public class Employee implements Comparable<Employee>{
     private final static double LOW_TAX = 0.1;

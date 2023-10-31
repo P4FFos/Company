@@ -1,6 +1,6 @@
 package employeetests;
 
-import assignment3.Company.Company;
+import Company.Company;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -18,15 +18,15 @@ public class Epic1US2Test {
     private Company hbo;
 
     @BeforeAll
-    public static void setupSystem(){
+    public static void setupSystem() {
         Locale.setDefault(Locale.US);
     }
 
     @BeforeEach
-    public void setupFacade(){
+    public void setupFacade() {
         netflix = new Company();
 
-        try{
+        try {
             // 2 employees, 2 directors, 1 manager, 3 interns
             // G: Gross salary; N: Net salary
             netflix.createEmployee("Emp1", "Elektra", 35000.50, "MSc", "Business");       // G: 47000.60; N: 37600.48
@@ -37,7 +37,7 @@ public class Epic1US2Test {
             netflix.createEmployee("Emp6", "Candy", 35000.50, 4);                         // G:     0.00; N:     0.00
             netflix.createEmployee("Emp7", "Ricky", 23500.00);                            // G: 23500.00; N: 21150.00
             netflix.createEmployee("Emp8", "Damon", 22100.00);                            // G: 22100.00; N: 19890.00
-        }catch(Exception e){
+        } catch (Exception e) {
             assertFalse(true); // Forces an error in the test. The creation should work without problems.
         }
     }

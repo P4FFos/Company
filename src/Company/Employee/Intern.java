@@ -1,6 +1,6 @@
 package Company.Employee;
 
-import assignment3.Exceptions.InvalidEmployeeDataException;
+import Company.Exceptions.InvalidEmployeeDataException;
 
 public class Intern extends Employee {
     private int GPA;

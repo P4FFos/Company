@@ -1,9 +1,10 @@
 package employeetests;
 
-import assignment3.Company.Company;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import Company.Company;
+
 
 import java.util.Locale;
 
@@ -14,21 +15,21 @@ public class Epic2Test {
     private Company facade;
 
     @BeforeAll
-    public static void setupSystem(){
+    public static void setupSystem() {
         Locale.setDefault(Locale.US);
     }
 
     @BeforeEach
-    public void setupFacade(){
+    public void setupFacade() {
         facade = new Company();
     }
 
     @Test
-    public void shouldNotHaveRepeatedID(){
+    public void shouldNotHaveRepeatedID() {
         Company facade = new Company();
-        try{
+        try {
             facade.createEmployee("Emp1", "Ada Lovelace", 74000.00);
-        }catch(Exception e){
+        } catch (Exception e) {
             fail("Test failed. Should have been able to create employee with id Emp1.");
         }
 
@@ -39,16 +40,16 @@ public class Epic2Test {
         assertEquals(expectedErrorMessage, actualException.getMessage());
 
 
-        try{
+        try {
             facade.removeEmployee("Emp1");
             facade.createEmployee("Emp1", "Grace Hopper", 43000.00);
-        }catch(Exception e){
+        } catch (Exception e) {
             fail("Test failed. Should have been able to create employee with id Emp1.");
         }
     }
 
     @Test
-    public void shouldThrowExceptionForNoEmployees(){
+    public void shouldThrowExceptionForNoEmployees() {
         String expectedMessage = "No employees registered yet.";
 
         Exception exceptionPrintAll = assertThrows(Exception.class, () -> {

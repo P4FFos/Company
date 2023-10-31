@@ -1,9 +1,10 @@
 package employeetests;
 
-import assignment3.Company.Company;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import Company.Company;
+
 
 import java.util.Locale;
 

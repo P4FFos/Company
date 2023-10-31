@@ -1,7 +1,7 @@
 package Company.Employee;
 
-import assignment3.Exceptions.InvalidEmployeeDataException;
-import assignment3.Util.Util;
+import Company.Exceptions.InvalidEmployeeDataException;
+import Company.Util.Util;
 
 
 public class Director extends Manager {
